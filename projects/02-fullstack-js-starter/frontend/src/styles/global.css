@@ -1,0 +1,24 @@
+/* FILE PURPOSE: Global CSS reset and base typography for the learning project. */
+/* LEARNING NOTE: Global styles set the tone; component styles live in CSS Modules. */
+/* TRY THIS: Adjust the :root colors to craft your own theme. */
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #1f2933;
+  background-color: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+}

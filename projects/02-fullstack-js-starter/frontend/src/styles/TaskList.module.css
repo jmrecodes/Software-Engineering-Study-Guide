@@ -1,0 +1,97 @@
+/* FILE PURPOSE: Style the TaskList component with focus on readability. */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.heading {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.meta {
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  background: white;
+  box-shadow: 0 10px 20px -15px rgba(30, 41, 59, 0.5);
+  gap: 1.5rem;
+}
+
+.completed {
+  opacity: 0.7;
+  border-left: 4px solid #10b981;
+}
+
+.title {
+  font-weight: 700;
+}
+
+.description {
+  margin-top: 0.5rem;
+  color: #475569;
+}
+
+.timestamp {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.actionButton,
+.dangerButton {
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.actionButton {
+  background: #0ea5e9;
+  color: white;
+}
+
+.actionButton:disabled {
+  background: #38bdf8;
+  cursor: not-allowed;
+}
+
+.dangerButton {
+  background: #ef4444;
+  color: white;
+}
+
+.emptyState {
+  padding: 1rem;
+  background: #e0f2fe;
+  border-radius: 0.75rem;
+  color: #0c4a6e;
+}

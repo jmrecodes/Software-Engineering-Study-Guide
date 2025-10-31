@@ -1,0 +1,35 @@
+# macOS artifacts
+.DS_Store
+
+# Laravel app (after-app-with-laravel)
+projects/01-ecommerce-refactor/after-app-with-laravel/.env
+projects/01-ecommerce-refactor/after-app-with-laravel/.env.*
+!projects/01-ecommerce-refactor/after-app-with-laravel/.env.example
+projects/01-ecommerce-refactor/after-app-with-laravel/vendor/
+projects/01-ecommerce-refactor/after-app-with-laravel/node_modules/
+projects/01-ecommerce-refactor/after-app-with-laravel/public/build/
+projects/01-ecommerce-refactor/after-app-with-laravel/public/hot
+projects/01-ecommerce-refactor/after-app-with-laravel/public/storage/
+projects/01-ecommerce-refactor/after-app-with-laravel/storage/*.key
+projects/01-ecommerce-refactor/after-app-with-laravel/storage/logs/
+projects/01-ecommerce-refactor/after-app-with-laravel/storage/pail/
+projects/01-ecommerce-refactor/after-app-with-laravel/bootstrap/cache/*.php
+projects/01-ecommerce-refactor/after-app-with-laravel/.phpunit.result.cache
+
+# Fullstack JS Starter - backend
+projects/02-fullstack-js-starter/backend/.env
+projects/02-fullstack-js-starter/backend/.env.*
+!projects/02-fullstack-js-starter/backend/.env.example
+projects/02-fullstack-js-starter/backend/node_modules/
+projects/02-fullstack-js-starter/backend/dist/
+projects/02-fullstack-js-starter/backend/build/
+projects/02-fullstack-js-starter/backend/coverage/
+
+# Fullstack JS Starter - frontend
+projects/02-fullstack-js-starter/frontend/.env
+projects/02-fullstack-js-starter/frontend/.env.*
+!projects/02-fullstack-js-starter/frontend/.env.example
+projects/02-fullstack-js-starter/frontend/node_modules/
+projects/02-fullstack-js-starter/frontend/dist/
+projects/02-fullstack-js-starter/frontend/.vite/
+projects/02-fullstack-js-starter/frontend/coverage/

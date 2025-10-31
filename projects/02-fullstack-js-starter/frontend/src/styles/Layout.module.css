@@ -1,0 +1,68 @@
+/* FILE PURPOSE: Scoped styles for the Layout component. */
+/* LEARNING NOTE: CSS Modules generate unique class names to avoid clashes. */
+/* TRY THIS: Change the gap or padding values and see the UI react instantly. */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: white;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navLink,
+.navButton {
+  color: white;
+  font-weight: 600;
+}
+
+.navButton {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.navButton:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.userGreeting {
+  font-size: 0.95rem;
+}
+
+.main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.footer {
+  margin-top: auto;
+  padding: 1rem;
+  background: #1f2933;
+  color: #f1f5f9;
+  text-align: center;
+  font-size: 0.85rem;
+}

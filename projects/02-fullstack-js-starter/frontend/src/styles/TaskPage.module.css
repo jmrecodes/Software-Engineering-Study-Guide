@@ -1,0 +1,54 @@
+/* FILE PURPOSE: Layout for the main task management experience. */
+
+.page {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.listSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.info {
+  color: #334155;
+}
+
+.error {
+  color: #dc2626;
+}
+
+.sidebar {
+  background: white;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 16px 30px -20px rgba(15, 23, 42, 0.4);
+}
+
+.sidebarHeading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.sidebarList {
+  list-style: disc;
+  margin-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (max-width: 960px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+}

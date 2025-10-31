@@ -1,0 +1,30 @@
+/* FILE PURPOSE: Styling for the NotFoundPage component. */
+
+.wrapper {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 18px 30px -20px rgba(15, 23, 42, 0.4);
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1d4ed8;
+}
+
+.message {
+  margin-top: 1rem;
+  color: #475569;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+}

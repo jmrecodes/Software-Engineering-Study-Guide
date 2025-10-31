@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: mbstring, bcmath, pdo_mysql, sqlite3
+
+      - name: Install composer dependencies
+        run: |
+          cd laravel-after-app
+          composer install --no-progress --prefer-dist
+
+      - name: Prepare environment
+        run: |
+          cd laravel-after-app
+          cp .env.example .env
+          php artisan key:generate
+          echo "QUEUE_CONNECTION=sync" >> .env
+          echo "DB_CONNECTION=sqlite" >> .env
+          echo "DB_DATABASE=:memory:" >> .env
+
+      - name: Run tests
+        run: |
+          cd laravel-after-app
+          php artisan test --testsuite=Feature --colors=always

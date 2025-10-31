@@ -1,0 +1,45 @@
+/// LEARNING NOTE: This schema describes the database structure Prisma manages.
+/// Changing models here and running `prisma migrate dev` keeps your database in sync.
+/// TRY THIS: Add a new field, run a migration, and watch Prisma generate types for you.
+
+datasource db {
+  /// The database connection uses the DATABASE_URL from .env.
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  /// Prisma generates a TypeScript client for these models.
+  provider = "prisma-client-js"
+}
+
+/// User accounts authenticate via email/password and own tasks.
+model User {
+  id           String   @id @default(uuid())
+  name         String
+  email        String   @unique
+  passwordHash String
+  tasks        Task[]
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+/// Tasks represent things users want to accomplish.
+model Task {
+  id          String   @id @default(uuid())
+  title       String
+  description String?  /// Optional to keep entries lightweight.
+  status      TaskStatus @default(PENDING)
+  isCompleted Boolean   @default(false)
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId      String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+/// Enum keeps status consistent across records.
+enum TaskStatus {
+  PENDING
+  IN_PROGRESS
+  COMPLETED
+}
